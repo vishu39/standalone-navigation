@@ -1,0 +1,8 @@
+.hori {
+  display: flex;
+  flex-direction: column;
+}
+.vert {
+  display: flex;
+  flex-direction: row;
+}
