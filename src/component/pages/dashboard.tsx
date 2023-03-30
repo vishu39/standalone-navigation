@@ -2,10 +2,15 @@ import { useLocation } from "react-router-dom";
 import Layout from "../layout";
 
 const Dashboard = () => {
-  const { search } = useLocation();
-  const params = new URLSearchParams(search);
-  const layout = params.get("layout");
-  return <Layout layout={layout}></Layout>;
+  const search = window.location.href;
+  let params = new URLSearchParams(search);
+  let layout = params.get("layout") || "horizontal";
+
+  return (
+    <div>
+      <Layout layout={layout}></Layout>
+    </div>
+  );
 };
 
 export default Dashboard;
