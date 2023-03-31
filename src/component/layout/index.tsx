@@ -12,7 +12,7 @@ import {
 import { MenuProps } from "antd";
 
 const Layout = (props: any, children: any) => {
-  const { layout } = props;
+  const { layout, setLayout } = props;
   type MenuItem = Required<MenuProps>["items"][number];
 
   function getItem(
